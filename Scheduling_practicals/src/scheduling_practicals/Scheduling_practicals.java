@@ -38,9 +38,10 @@ public class Scheduling_practicals {
         // FCFS end
         
         //Shortest Job First
+        
         String[] arrSjob;
         arrSjob = new String[6];
-        String[] arrSorted = new String[6];
+        int[] arrSorted = new int[6];
         arrSjob[0]= "A10";
         arrSjob[1] = "B5";
         arrSjob[2] = "C3";
@@ -56,11 +57,27 @@ public class Scheduling_practicals {
         
         for(int k = 0; k < arrSjob.length;k++)
         {
-        arrSorted[k] = arrSjob[k].substring(1, arrSjob[k].length());
+        arrSorted[k] = Integer.parseInt(arrSjob[k].substring(1, arrSjob[k].length()));
         }
         
+        int n = arrSorted.length;
+    int temp = 0;
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 1; j < (n - i); j++) {
+
+            if (arrSorted[j - 1] > arrSorted[j]) {
+                temp = arrSorted[j - 1];
+                arrSorted[j - 1] = arrSorted[j];
+                arrSorted[j] = temp;
+            }
+
+        }
+    }
         
+   
+        System.out.println(Arrays.toString(arrSorted));
         
     }
-    
 }
+
