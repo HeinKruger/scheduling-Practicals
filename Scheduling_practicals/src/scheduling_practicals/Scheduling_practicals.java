@@ -25,7 +25,7 @@ public class Scheduling_practicals {
         // TODO code application logic here
          ArrayList<Integer> t2 = new ArrayList<>();
    LinkedList<String> list = new java.util.LinkedList<>();
-   
+    boolean check = false;
         //First come first serve
         String[] arrFCFS;
         arrFCFS = new String[6];
@@ -122,9 +122,38 @@ list.add("C3");
  t2.add(5);
  t2.add(3);
  
+ while(t2.size()!= 0)
+ {
+        System.out.println(list.getFirst()+" "); //print first value
+       
+      list.removeFirst();  //removes first value
+     t2.set(0, t2.get(0) -1);                        //set the new length
+      if(t2.get(0) == 0)                        //removal condition
+      {
+      t2.remove(0); 
+      check = true;
+      }
+      else                            // if not the last element remove another
+      {
+      System.out.println(list.getFirst()+" ");
+      list.removeFirst();
+      t2.set(0, t2.get(0) -1);  
+      if(t2.get(0) == 0)
+      {
+      t2.remove(0);
+      check = true;
+      }
+      }
+      if(check == false)
+      {
+      
+      }
+ } 
+ }
  
  
     }
   
+    
 }
 
