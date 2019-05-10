@@ -208,14 +208,12 @@ t3.add(1);
                 {
                 if(!Qlist1.isEmpty())
                 {
-                   System.out.println("\n");
-                 
                 System.out.println(Qlist1.getFirst()+"   ");
                 Qlist1.removeFirst();
                 }
                 else if(!Qlist2.isEmpty())
                 {
-                    System.out.println("\n");
+                    
                     if(t1.get(0)==2)
                     {
                 System.out.println(Qlist2.getFirst()+"  ");
@@ -236,7 +234,7 @@ t3.add(1);
                 }
                 else if(!Qlist3.isEmpty())
                 {
-                     System.out.println("\n");
+                    
                      
                  if(t3.get(0)>= 3)
                  {
