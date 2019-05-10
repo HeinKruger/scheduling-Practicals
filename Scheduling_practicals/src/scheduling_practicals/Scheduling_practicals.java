@@ -171,6 +171,9 @@ list.add("C3");
  System.out.println("Processes and length: ");
  System.out.println("A5,B6,C3,D4,E3");
  
+ Qlist1.add("A1");
+ Qlist1.add("B1");
+ Qlist1.add("C1");
  
  
  
