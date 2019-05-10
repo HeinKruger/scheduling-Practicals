@@ -31,8 +31,11 @@ public class Scheduling_practicals {
         arrFCFS[4] = "C1";
         arrFCFS[5] = "C2";
         
-        
-        
+        for(int i=0; i < arrFCFS.length; i++)
+        {
+        System.out.println(arrFCFS[i].toString());
+        }
+        // FCFS end
     }
     
 }
