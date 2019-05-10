@@ -47,7 +47,11 @@ public class Scheduling_practicals {
         arrSjob[4] = "E7";
         arrSjob[5] = "F9";
         
-        
+        System.out.println("Initial processes in CPU:");
+        for(int i=0; i < arrFCFS.length; i++)
+        {
+        System.out.println(arrSjob[i].toString());
+        }
         
         
     }
