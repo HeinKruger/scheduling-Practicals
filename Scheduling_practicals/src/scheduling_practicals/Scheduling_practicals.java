@@ -27,12 +27,6 @@ public class Scheduling_practicals {
    LinkedList<String> list = new java.util.LinkedList<>();
     boolean check = false;
     
-    //Multiple Queue Input
-     LinkedList<String> Qlist1 = new java.util.LinkedList<>();
-   LinkedList<String> Qlist2 = new java.util.LinkedList<>();
-   LinkedList<String> Qlist3 = new java.util.LinkedList<>();
-    ArrayList<Integer> t3 = new ArrayList<>();
-    ArrayList<Integer> t1 = new ArrayList<>();
     
         //First come first serve
         String[] arrFCFS;
@@ -166,7 +160,9 @@ list.add("C3");
  } 
  
  //Mulitple Queues
- 
+ System.out.println("Multiple Queues:");
+ System.out.println("Processes and length: ");
+ System.out.println("A5,B6,C3,D4,E3");
  
  
  
