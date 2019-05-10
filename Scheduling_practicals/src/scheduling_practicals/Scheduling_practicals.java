@@ -33,13 +33,14 @@ public class Scheduling_practicals {
         
         for(int i=0; i < arrFCFS.length; i++)
         {
-        System.out.println(arrFCFS[i].toString());
+        System.out.println(arrFCFS[i]);
         }
         // FCFS end
         
         //Shortest Job First
         String[] arrSjob;
         arrSjob = new String[6];
+        String[] arrSorted = new String[6];
         arrSjob[0]= "A10";
         arrSjob[1] = "B5";
         arrSjob[2] = "C3";
@@ -48,10 +49,16 @@ public class Scheduling_practicals {
         arrSjob[5] = "F9";
         
         System.out.println("Initial processes in CPU:");
-        for(int i=0; i < arrFCFS.length; i++)
+        for(int i=0; i < arrSjob.length; i++)
         {
-        System.out.println(arrSjob[i].toString());
+        System.out.println(arrSjob[i]);
         }
+        
+        for(int k = 0; k < arrSjob.length;k++)
+        {
+        arrSorted[k] = arrSjob[k].substring(1, arrSjob[k].length());
+        }
+        
         
         
     }
