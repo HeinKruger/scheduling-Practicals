@@ -26,6 +26,15 @@ public class Scheduling_practicals {
          ArrayList<Integer> t2 = new ArrayList<>();
    LinkedList<String> list = new java.util.LinkedList<>();
     boolean check = false;
+    
+    //Multiple Queue Input
+     LinkedList<String> Qlist1 = new java.util.LinkedList<>();
+   LinkedList<String> Qlist2 = new java.util.LinkedList<>();
+   LinkedList<String> Qlist3 = new java.util.LinkedList<>();
+    ArrayList<Integer> t3 = new ArrayList<>();
+    ArrayList<Integer> t1 = new ArrayList<>();
+     boolean Pause= false;
+    
         //First come first serve
         String[] arrFCFS;
         arrFCFS = new String[6];
@@ -156,9 +165,139 @@ list.add("C3");
     t2.remove(0);
       }
  } 
+ 
+ //Mulitple Queues
+ System.out.println("Multiple Queues:");
+ System.out.println("Processes and length: ");
+ System.out.println("A5,B6,C3,D4,E3,F2");
+ 
+ Qlist1.add("A1");
+ Qlist1.add("B1");
+ Qlist1.add("C1");
+ Qlist1.add("F1");
+ 
+ Qlist2.add("A2");
+ Qlist2.add("A3");
+ t1.add(2);
+ Qlist2.add("B2");
+ Qlist2.add("B3");
+ t1.add(2);
+ Qlist2.add("C2");
+ Qlist2.add("C3");
+ t1.add(2);
+ Qlist2.add("D2");
+ Qlist2.add("D3");
+ t1.add(2);
+ Qlist2.add("E2");
+ Qlist2.add("E3");
+ t1.add(2);
+ Qlist2.add("F2");
+ t1.add(1);
+ 
+ Qlist3.add("A4");
+ Qlist3.add("A5");
+ t3.add(2);
+ Qlist3.add("B4");
+ Qlist3.add("B5");
+ Qlist3.add("B6");
+ t3.add(3);
+ Qlist3.add("D4");
+t3.add(1);
+
+  while(Pause == false)
+                {
+                if(!Qlist1.isEmpty())
+                {
+                System.out.println(Qlist1.getFirst()+"   ");
+                Qlist1.removeFirst();
+                }
+                else if(!Qlist2.isEmpty())
+                {
+                    
+                    if(t1.get(0)==2)
+                    {
+                System.out.println(Qlist2.getFirst()+"  ");
+    
+                Qlist2.removeFirst();
+                System.out.println(Qlist2.getFirst()+"  ");
+                
+                Qlist2.removeFirst();
+                t1.remove(0);
+                    }
+                    else
+                    {
+                   System.out.println(Qlist2.getFirst()+"   ");
+              
+                Qlist2.removeFirst();
+                    }
+    
+                }
+                else if(!Qlist3.isEmpty())
+                {
+                    
+                     
+                 if(t3.get(0)>= 3)
+                 {
+                  System.out.println(Qlist3.getFirst()+"   ");
+                  
+                Qlist3.removeFirst();
+                System.out.println(Qlist3.getFirst()+"  ");
+                
+                Qlist3.removeFirst();
+                System.out.println(Qlist3.getFirst()+"  ");
+                
+                Qlist3.removeFirst();
+                t3.set(0, (t3.get(0) -3));
+                if( t3.get(0) == 0)
+                {
+                t3.remove(0);       
+                }
+                else                                                                   
+                 {
+                for(int i =0; i< t3.get(0);i++)
+    {
+    Qlist3.add(Qlist3.getFirst());
+   Qlist3.removeFirst();
+    }
+    t3.add(t3.get(0));
+    t3.remove(0);
+                 }
+                 }
+                 else if(t3.get(0) == 2)
+                 {
+                   
+                 System.out.println(Qlist3.getFirst()+"  ");
+                
+                Qlist3.removeFirst();
+               System.out.println(Qlist3.getFirst()+"  ");
+               
+                Qlist3.removeFirst();  
+                t3.remove(0);       
+                 }
+                 else
+                 {
+                  System.out.println(Qlist3.getFirst()+"   ");
+                  
+                Qlist3.removeFirst();
+                 t3.remove(0);  
+                 }
+                }
+                else
+                {
+               System.out.println("\n done");
+                }
+                if(Qlist1.isEmpty() && Qlist2.isEmpty() && Qlist3.isEmpty())
+                {
+                    Pause = true;
+                }
+                }
+ 
+ 
+ 
+ 
+ 
+ 
  }
- 
- 
     }
   
     
