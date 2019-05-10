@@ -33,9 +33,67 @@ public class Scheduling_practicals {
         
         for(int i=0; i < arrFCFS.length; i++)
         {
-        System.out.println(arrFCFS[i].toString());
+        System.out.println(arrFCFS[i]);
         }
         // FCFS end
+        
+        //Shortest Job First
+        
+        String[] arrSjob;
+        arrSjob = new String[6];
+        int[] arrSorted = new int[6];
+        arrSjob[0]= "A10";
+        arrSjob[1] = "B5";
+        arrSjob[2] = "C3";
+        arrSjob[3] = "D2";
+        arrSjob[4] = "E7";
+        arrSjob[5] = "F9";
+        
+        System.out.println("Initial processes in CPU:");
+        for(int i=0; i < arrSjob.length; i++)
+        {
+        System.out.println(arrSjob[i]);
+        }
+        
+        // retrieve process lengths
+        for(int k = 0; k < arrSjob.length;k++)
+        {
+        arrSorted[k] = Integer.parseInt(arrSjob[k].substring(1, arrSjob[k].length()));
+        }
+        
+        //sort process lengths
+        int n = arrSorted.length;
+    int temp = 0;
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 1; j < (n - i); j++) {
+
+            if (arrSorted[j - 1] > arrSorted[j]) {
+                temp = arrSorted[j - 1];
+                arrSorted[j - 1] = arrSorted[j];
+                arrSorted[j] = temp;
+            }
+
+        }
     }
-    
+      
+    String temp1;
+    for(int i = 0; i < n; i++)
+    {
+        for(int k=0; k <n; k++)
+        {
+        if(Integer.parseInt(arrSjob[i].substring(1, arrSjob[i].length())) == arrSorted[k] )
+        {
+        temp1 = arrSjob[k];
+        arrSjob[k] =arrSjob[i];
+        arrSjob[i] = temp1;
+        
+        }
+        
+        }
+    }
+  System.out.println("Execution order with shortest job first");
+ System.out.println(Arrays.toString(arrSjob));
+    }
 }
+
