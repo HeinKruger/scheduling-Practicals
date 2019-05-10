@@ -10,16 +10,22 @@ package scheduling_practicals;
  * @author Hein
  */
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 
 public class Scheduling_practicals {
 
     /**
      * @param args the command line arguments
      */
+    
+   
     public static void main(String[] args) {
         // TODO code application logic here
-        
+         ArrayList<Integer> t2 = new ArrayList<>();
+   LinkedList<String> list = new java.util.LinkedList<>();
+   
         //First come first serve
         String[] arrFCFS;
         arrFCFS = new String[6];
@@ -94,6 +100,31 @@ public class Scheduling_practicals {
     }
   System.out.println("Execution order with shortest job first");
  System.out.println(Arrays.toString(arrSjob));
+ 
+  //Round Robin
+ 
+  //initial input
+ list.add("A1");
+ list.add("A2");
+ list.add("A3");
+ list.add("A4");
+ list.add("A5");
+ list.add("A6");
+ list.add("B1");
+ list.add("B2");
+ list.add("B3");
+ list.add("B4");
+ list.add("B5");
+list.add("C1");
+list.add("C2");
+list.add("C3");
+ t2.add(6);
+ t2.add(5);
+ t2.add(3);
+ 
+ 
+ 
     }
+  
 }
 
