@@ -102,7 +102,7 @@ public class Scheduling_practicals {
  System.out.println(Arrays.toString(arrSjob));
  
   //Round Robin
- 
+ System.out.println("Round Robin method:");
   //initial input
  list.add("A1");
  list.add("A2");
@@ -121,7 +121,8 @@ list.add("C3");
  t2.add(6);
  t2.add(5);
  t2.add(3);
- 
+ System.out.println("Initial processes in CPU: ");
+ System.out.println(list);
  while(t2.size()!= 0)
  {
         System.out.println(list.getFirst()+" "); //print first value
