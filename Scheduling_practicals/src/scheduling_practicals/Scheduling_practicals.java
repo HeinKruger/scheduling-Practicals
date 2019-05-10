@@ -193,6 +193,94 @@ list.add("C3");
  Qlist3.add("B6");
  Qlist3.add("D4");
 
+  while(Pause == false)
+                {
+                if(!Qlist1.isEmpty())
+                {
+                   System.out.println("\n");
+                   sleep();
+                System.out.println(Qlist1.getFirst()+"   ");
+                Qlist1.removeFirst();
+                }
+                else if(!Qlist2.isEmpty())
+                {
+                    System.out.println("\n");
+                    if(t1.get(0)==2)
+                    {
+                System.out.println(Qlist2.getFirst()+"  ");
+                sleep();
+                Qlist2.removeFirst();
+                System.out.println(Qlist2.getFirst()+"  ");
+                sleep();
+                Qlist2.removeFirst();
+                t1.remove(0);
+                    }
+                    else
+                    {
+                   System.out.println(Qlist2.getFirst()+"   ");
+                   sleep();
+                Qlist2.removeFirst();
+                    }
+    
+                }
+                else if(!Qlist3.isEmpty())
+                {
+                     System.out.println("\n");
+                     
+                 if(t3.get(0)>= 3)
+                 {
+                  System.out.println(Qlist3.getFirst()+"   ");
+                  sleep();
+                Qlist3.removeFirst();
+                System.out.println(Qlist3.getFirst()+"  ");
+                sleep();
+                Qlist3.removeFirst();
+                System.out.println(Qlist3.getFirst()+"  ");
+                sleep();
+                Qlist3.removeFirst();
+                t3.set(0, (t3.get(0) -3));
+                if( t3.get(0) == 0)
+                {
+                t3.remove(0);       
+                }
+                else                                                                   
+                 {
+                 Mmovetoback();
+                 }
+                 }
+                 else if(t3.get(0) == 2)
+                 {
+                   
+                 System.out.println(Qlist3.getFirst()+"  ");
+                 sleep();
+                Qlist3.removeFirst();
+               System.out.println(Qlist3.getFirst()+"  ");
+               sleep();
+                Qlist3.removeFirst();  
+                t3.remove(0);       
+                 }
+                 else
+                 {
+                  System.out.println(Qlist3.getFirst()+"   ");
+                  sleep();
+                Qlist3.removeFirst();
+                 t3.remove(0);  
+                 }
+                }
+                else
+                {
+               System.out.println("\n done");
+                }
+                if(Qlist1.isEmpty() && Qlist2.isEmpty() && Qlist3.isEmpty())
+                {
+                    Pause = true;
+                }
+                }
+ 
+ 
+ 
+ 
+ 
  
  }
     }
