@@ -55,11 +55,13 @@ public class Scheduling_practicals {
         System.out.println(arrSjob[i]);
         }
         
+        // retrieve process lengths
         for(int k = 0; k < arrSjob.length;k++)
         {
         arrSorted[k] = Integer.parseInt(arrSjob[k].substring(1, arrSjob[k].length()));
         }
         
+        //sort process lengths
         int n = arrSorted.length;
     int temp = 0;
 
@@ -74,10 +76,24 @@ public class Scheduling_practicals {
 
         }
     }
+      
+    String temp1;
+    for(int i = 0; i < n; i++)
+    {
+        for(int k=0; k <n; k++)
+        {
+        if(Integer.parseInt(arrSjob[i].substring(1, arrSjob[i].length())) == arrSorted[k] )
+        {
+        temp1 = arrSjob[k];
+        arrSjob[k] =arrSjob[i];
+        arrSjob[i] = temp1;
         
-   
-        System.out.println(Arrays.toString(arrSorted));
+        }
         
+        }
+    }
+  System.out.println("Execution order with shortest job first");
+ System.out.println(Arrays.toString(arrSjob));
     }
 }
 
