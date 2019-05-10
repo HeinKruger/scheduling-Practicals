@@ -144,9 +144,15 @@ list.add("C3");
       check = true;
       }
       }
-      if(check == false)
+      if(check == false)//move to back
       {
-      
+       for(int i =0; i< t2.get(0);i++)
+    {
+    list.add(list.getFirst());
+    list.removeFirst();
+    }
+    t2.add(t2.get(0));
+    t2.remove(0);
       }
  } 
  }
@@ -155,5 +161,5 @@ list.add("C3");
     }
   
     
-}
+
 
