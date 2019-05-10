@@ -36,6 +36,20 @@ public class Scheduling_practicals {
         System.out.println(arrFCFS[i].toString());
         }
         // FCFS end
+        
+        //Shortest Job First
+        String[] arrSjob;
+        arrSjob = new String[6];
+        arrSjob[0]= "A10";
+        arrSjob[1] = "B5";
+        arrSjob[2] = "C3";
+        arrSjob[3] = "D2";
+        arrSjob[4] = "E7";
+        arrSjob[5] = "F9";
+        
+        
+        
+        
     }
     
 }
