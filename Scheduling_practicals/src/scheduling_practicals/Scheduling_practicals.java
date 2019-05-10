@@ -186,6 +186,14 @@ list.add("C3");
  Qlist2.add("E2");
  Qlist2.add("E3");
  
+ Qlist3.add("A4");
+ Qlist3.add("A5");
+ Qlist3.add("B4");
+ Qlist3.add("B5");
+ Qlist3.add("B6");
+ Qlist3.add("D4");
+
+ 
  }
     }
   
