@@ -33,7 +33,7 @@ public class Scheduling_practicals {
    LinkedList<String> Qlist3 = new java.util.LinkedList<>();
     ArrayList<Integer> t3 = new ArrayList<>();
     ArrayList<Integer> t1 = new ArrayList<>();
-    
+     boolean Pause= false;
     
         //First come first serve
         String[] arrFCFS;
@@ -169,36 +169,47 @@ list.add("C3");
  //Mulitple Queues
  System.out.println("Multiple Queues:");
  System.out.println("Processes and length: ");
- System.out.println("A5,B6,C3,D4,E3");
+ System.out.println("A5,B6,C3,D4,E3,F2");
  
  Qlist1.add("A1");
  Qlist1.add("B1");
  Qlist1.add("C1");
+ Qlist1.add("F1");
  
  Qlist2.add("A2");
  Qlist2.add("A3");
+ t1.add(2);
  Qlist2.add("B2");
  Qlist2.add("B3");
+ t1.add(2);
  Qlist2.add("C2");
  Qlist2.add("C3");
+ t1.add(2);
  Qlist2.add("D2");
  Qlist2.add("D3");
+ t1.add(2);
  Qlist2.add("E2");
  Qlist2.add("E3");
+ t1.add(2);
+ Qlist2.add("F2");
+ t1.add(1);
  
  Qlist3.add("A4");
  Qlist3.add("A5");
+ t3.add(2);
  Qlist3.add("B4");
  Qlist3.add("B5");
  Qlist3.add("B6");
+ t3.add(3);
  Qlist3.add("D4");
+t3.add(1);
 
   while(Pause == false)
                 {
                 if(!Qlist1.isEmpty())
                 {
                    System.out.println("\n");
-                   sleep();
+                 
                 System.out.println(Qlist1.getFirst()+"   ");
                 Qlist1.removeFirst();
                 }
@@ -208,17 +219,17 @@ list.add("C3");
                     if(t1.get(0)==2)
                     {
                 System.out.println(Qlist2.getFirst()+"  ");
-                sleep();
+    
                 Qlist2.removeFirst();
                 System.out.println(Qlist2.getFirst()+"  ");
-                sleep();
+                
                 Qlist2.removeFirst();
                 t1.remove(0);
                     }
                     else
                     {
                    System.out.println(Qlist2.getFirst()+"   ");
-                   sleep();
+              
                 Qlist2.removeFirst();
                     }
     
@@ -230,13 +241,13 @@ list.add("C3");
                  if(t3.get(0)>= 3)
                  {
                   System.out.println(Qlist3.getFirst()+"   ");
-                  sleep();
+                  
                 Qlist3.removeFirst();
                 System.out.println(Qlist3.getFirst()+"  ");
-                sleep();
+                
                 Qlist3.removeFirst();
                 System.out.println(Qlist3.getFirst()+"  ");
-                sleep();
+                
                 Qlist3.removeFirst();
                 t3.set(0, (t3.get(0) -3));
                 if( t3.get(0) == 0)
@@ -252,17 +263,17 @@ list.add("C3");
                  {
                    
                  System.out.println(Qlist3.getFirst()+"  ");
-                 sleep();
+                
                 Qlist3.removeFirst();
                System.out.println(Qlist3.getFirst()+"  ");
-               sleep();
+               
                 Qlist3.removeFirst();  
                 t3.remove(0);       
                  }
                  else
                  {
                   System.out.println(Qlist3.getFirst()+"   ");
-                  sleep();
+                  
                 Qlist3.removeFirst();
                  t3.remove(0);  
                  }
