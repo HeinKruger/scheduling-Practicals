@@ -256,7 +256,13 @@ t3.add(1);
                 }
                 else                                                                   
                  {
-                 Mmovetoback();
+                for(int i =0; i< t3.get(0);i++)
+    {
+    Qlist3.add(Qlist3.getFirst());
+   Qlist3.removeFirst();
+    }
+    t3.add(t3.get(0));
+    t3.remove(0);
                  }
                  }
                  else if(t3.get(0) == 2)
